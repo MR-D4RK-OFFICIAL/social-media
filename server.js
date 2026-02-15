@@ -16,9 +16,9 @@ app.use(express.json());
 app.use(express.static("public"));
 app.use("/uploads", express.static("uploads"));
 
-/* MongoDB connect */
-mongoose.connect("mongodb+srv://anikaakter8755_db_user:1YWFsFd32lCQEWl5@cluster0.g1x9kfa.mongodb.net/social?retryWrites=true&w=majority");
-
+mongoose.connect(
+  "mongodb+srv://anikaakter8755_db_user:1YWFsFd32lCQEWl5@cluster0.g1x9kfa.mongodb.net/social?retryWrites=true&w=majority&tls=true"
+);
 /* Models */
 const User = require("./models/User");
 const Post = require("./models/Post");
